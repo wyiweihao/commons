@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BOSFXII xmlns="http://www.weisen.com">
+	<CBIB0008Rq>
+		<CommonRqHdr>
+			<SPName>CBIB</SPName>
+			<RqUID> rqUID  </RqUID>
+			<NumTranCode>000823</NumTranCode>
+			<ClearDate>20110325</ClearDate>
+			<TranDate>20110325</TranDate>
+			<TranTime>151440</TranTime>
+			<ChannelId>S10</ChannelId>
+			<Version>1.0</Version>
+		</CommonRqHdr>
+		<FlowCode>CBIB0008</FlowCode>
+		<TransCode>T0000</TransCode>
+		<Eacct>cardNo</Eacct>
+		<ProductParam>BOSIntelligentDeposit</ProductParam>
+		<SubProdParam>ID100001</SubProdParam>
+		<Pwd>pwd</Pwd>
+		<Amount>147.05</Amount>
+		<Currency>156</Currency>
+		<TxnShortDesc>智能存款存入测试</TxnShortDesc>
+	</CBIB0008Rq>
+</BOSFXII>

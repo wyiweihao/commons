@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Template>
+	<![CDATA[
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<Trans>
+			<Header>
+				<RqUID>${rqUID}</RqUID><#-- 流水号 （这个是注释）-->
+				<TransCode>${transCode}</TransCode>
+			</Header>
+			<Body>
+				<Name>${name}</Name>
+				<Age>${age}</Age>
+		
+		<#-- 集合的迭代 -->
+				<#list parts as item>
+		   		<Part>${item}</Part>
+				</#list>
+		
+		<#--  -->		
+		<#-- 通用插值(1234)  -->		
+		<#-- 1. 插值结果为字符串值:直接输出表达式结果 -->		
+		<#-- 2. 插值结果为数字值:根据默认格式(由#setting指令设置)将表达式结果转换成文本输出.可以使用内建的字符串函数格式化单个插值,如下面的例子: -->		
+				<#setting number_format="currency"/>
+				<#assign answer=42/>
+				${answer}
+				${answer?string} <#-- the same as ${answer} -->
+				${answer?string.number}
+				${answer?string.currency}
+				${answer?string.percent}
+				
+		<#-- 3. 插值结果为日期值:根据默认格式(由#setting指令设置)将表达式结果转换成文本输出.可以使用内建的字符串函数格式化单个插值,如下面的例子:  -->
+				${lastUpdated?string("yyyy-MM-dd HH:mm:ss zzzz")}
+				${lastUpdated?string("EEE, MMM d, ''yy")}
+				${lastUpdated?string("EEEE, MMMM dd, yyyy, hh:mm:ss a '('zzz')'")}
+				
+		<#-- 4. 插值结果为布尔值:根据默认格式(由#setting指令设置)将表达式结果转换成文本输出.可以使用内建的字符串函数格式化单个插值,如下面的例子: -->	
+				<#assign foo=true/>
+				${foo?string("yes", "no")}
+		
+	]]>
+</Template>		

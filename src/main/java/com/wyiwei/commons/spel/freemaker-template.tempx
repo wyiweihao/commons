@@ -1,0 +1,77 @@
+<#--   -->
+<#-- 1. if 指令  -->
+	<#assign age=23>
+	<#if (age>60)>老年人
+	<#elseif (age>40)>中年人
+	<#elseif (age>20)>青年人
+	<#else> 少年人
+	</#if>
+
+<#-- 2. switch , case , default , break指令  -->
+	<#assign num=2>
+	<#switch num>
+		<#case 1>111<#break>
+		<#case 2>222<#break>
+		<#case 3>333<#break>
+		<#default>ddd
+	</#switch>
+
+<#-- 3. list, break指令  
+	item_index:当前变量的索引值
+	item_has_next:是否存在下一个对象 -->
+	
+	<#list ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期天"] as x>
+		${x_index + 1}.${x}<#if x_has_next></#if>
+		<#if x="星期四"><#break></#if>
+	</#list>
+	
+<#-- 4.其他语法详见：C:\Users\hasee\Desktop\通用\资料\代码知识点\freemaker\freemarker-使用详解.docx  -->
+
+
+<#--   -->
+	年龄是：#{age}
+	
+	<#setting number_format="0.00%"/>
+	<#assign x=2.582/>
+	
+	${x} <#-- 这里只能用$表达式，用#表达式没有效果 -->
+	
+	
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
+<#--   -->
+
+
